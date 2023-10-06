@@ -50,7 +50,7 @@ document.querySelector("#btn-count-pos").onclick = function() {
 
 //b3
 
-document.querySelector('#btn-pos-min').onclick = function (){
+document.querySelector('#btn-min').onclick = function (){
 
     var indexMin = -1;
     var min = ArrOutput[0];
@@ -65,5 +65,21 @@ document.querySelector('#btn-pos-min').onclick = function (){
 
     var minNumber = ArrOutput[indexMin];
 
-    document.querySelector('#positiveMin').innerHTML = minNumber;
+    document.querySelector('#minNumber').innerHTML = minNumber;
+}
+
+//b4
+
+document.querySelector('#btn-pos-min').onclick = function (){
+
+    var positiveMin = ArrOutput[0];
+
+    for (let index = 0; index < ArrOutput.length; index++) {
+        if ( ArrOutput[index] > 0  && ArrOutput[index]< positiveMin ) {
+            positiveMin = ArrOutput[index]
+        }        
+    }
+
+
+    document.querySelector('#positiveMin').innerHTML = positiveMin;
 }
